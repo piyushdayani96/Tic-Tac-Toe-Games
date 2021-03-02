@@ -1,0 +1,9 @@
+.grid-row{
+    display:grid;  
+    grid-template-columns: repeat(3,auto);
+    width: 300px;
+    /* margin: 50px auto; */
+    border:1px solid black; 
+   
+   
+ }
