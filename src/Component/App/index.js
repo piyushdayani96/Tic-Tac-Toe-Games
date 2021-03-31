@@ -5,12 +5,7 @@ import React from "react";
 import GridRow from '../GridRow';
 import Header from '../Header';
 import Footer from '../Footer';
-import Home from '../Home';
-import About from '../About';
 
-
-import CityInput from '../CityInput'
-import CityWeather from '../CityWeather'
 // function App(){
 //   const [city,setCity]=React.useState("");
 //   const [cityWeather,setCityWeather]=React.useState({});
@@ -99,6 +94,7 @@ class App extends React.Component
   handlePlayerClick=(rowIndex,colIndex)=>{
     // this.gameState[rowIndex][colIndex]=playerTurn;
     //Make a copy .
+    console.log("Handleclicked");
     if(this.state.gameStatus==true && this.state.gameState[rowIndex][colIndex]=="" && this.state.drawStatus==false)
     {
     const copiedGameState=[...this.state.gameState];
@@ -140,9 +136,10 @@ class App extends React.Component
 
       if(count==0 )
       { console.log("ABC");
+      console.log("draw")
         this.setState(
           {
-          
+           
             drawStatus:true,
             gameStatus:false,
 
@@ -157,7 +154,7 @@ class App extends React.Component
   {     console.log(this.state.gameStatus)
     return(
     
-    <div className="container">
+    <div className="container" style={{paddingLeft:"0px",paddingRight:"0px"}}>
       <Header/>
       <div id="board">
         {this.state.gameState.map((row,rowIndex)=>(
@@ -170,7 +167,7 @@ class App extends React.Component
       turn={this.state.playerTurn}
       gameStatus={this.state.gameStatus}
       resetGame={this.resetGame}
-      drawStatus={this.drawStatus}
+      drawStatus={this.state.drawStatus}
       />
 
     </div>

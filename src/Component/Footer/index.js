@@ -13,8 +13,8 @@ class Footer extends React.Component{
         {
                  return (
                 <>
-                  <div className="App-footer" >Oops! Match Draw</div>
-                  <button className="App-footer" onClick={()=>{this.props.resetGame()}}>Reset</button>
+                  <div className="turn" >Oops! Match Draw</div>
+                  <button className="reset" onClick={()=>{this.props.resetGame()}}>Reset</button>
                   </>
 
         )
@@ -25,8 +25,8 @@ class Footer extends React.Component{
                  
         return (
                 <>
-                  <div className="App-footer" >Player {this.props.turn}'s turn</div>
-                  <button className="App-footer" onClick={()=>{this.props.resetGame()}}>Reset</button>
+                  <div className="turn" >Player {this.props.turn}'s turn</div>
+                  <button className="reset" onClick={()=>{this.props.resetGame()}}>Reset</button>
                   </>
 
         )
@@ -35,8 +35,8 @@ class Footer extends React.Component{
         {
            return (
                <>
-                  <div className="App-footer" >Player {this.props.turn} Won</div>
-                    <button className="App-footer" onClick={()=>{this.props.resetGame()}}>Reset</button>
+                  <div className="turn" >Player {this.props.turn} Won</div>
+                    <button className="reset" onClick={()=>{this.props.resetGame()}}>Reset</button>
                     </>
         )
         }

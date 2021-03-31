@@ -1,8 +1,21 @@
-.App-footer {
-    background-color: #282c34;
+.turn {
+    background-color: #9933CC;
     min-height: 10vh;
     width:50vh;
-    margin: 0px auto;
+    margin: 2px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  .reset {
+    background-color: #304FFE;
+    min-height: 10vh;
+    width:50vh;
+    margin: 2px auto;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
